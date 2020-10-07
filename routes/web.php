@@ -27,3 +27,7 @@ $router->get('hello/{name}', function($name){
 
 $router->get('/products', 'ProductController@index');
 $router->get('/products/{id}', 'ProductController@show');
+
+$router->post('/products', 'ProductController@store');
+
+$router->delete('/products/{id}', 'ProductController@destroy');
