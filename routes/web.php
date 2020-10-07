@@ -20,3 +20,10 @@ $router->get('/', function () use ($router) {
 $router->get('/biodata', function (){
     return 'Nama: Mohammad Raska, NIM: 175150700111019';
 });
+
+$router->get('hello/{name}', function($name){
+    return 'Hello, '. $name;
+});
+
+$router->get('/products', 'ProductController@index');
+$router->get('/products/{id}', 'ProductController@show');
